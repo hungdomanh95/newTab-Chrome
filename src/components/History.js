@@ -20,7 +20,7 @@ const History = () => {
     localStorage.setItem("array", JSON.stringify(array));
   }
   return (
-    <div className="content">
+    <div className="content content-history">
       <div className="history">
         <div className='table-addNew'>
           <div className="list-addNew">

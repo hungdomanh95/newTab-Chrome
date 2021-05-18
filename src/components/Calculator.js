@@ -8,14 +8,20 @@ const Calculator = () => {
   const [result1, setResult1] = React.useState(0);
   const [result2, setResult2] = React.useState(0);
   const [profit1, setProfit1] = React.useState(0);
+  console.log('profit1: ', profit1);
   const [profit2, setProfit2] = React.useState(0);
+  console.log('profit2: ', profit2);
+  const [withdrawalValue1, setWithdrawalValue1] = React.useState(0);
+  const [withdrawalValue2, setWithdrawalValue2] = React.useState(0);
   const handleCalc = () => {
     if (entry && target1 && target2 && money) {
       if (money >= 10) {
         setResult1((money * target1) / entry);
         setResult2((money * target2) / entry);
-        setProfit1(result1 - money)
-        setProfit2(result2 - money)
+        setProfit1((money * target1) / entry - money)
+        setProfit2((money * target2) / entry - money)
+        setWithdrawalValue1((money * target1) / entry - 10 )
+        setWithdrawalValue2((money * target2) / entry - 10 )
       } else alert("Please enter more than 10$ ");
     }
   };
@@ -91,7 +97,9 @@ const Calculator = () => {
       </div>
       <div className='result'>
         <p className="title">Profit 1: {numeral(profit1).format('0.0')} $</p>
+        <p className="title">Withdrawal Value 1: {numeral(withdrawalValue1).format('0.0')} $</p>
         <p className="title">Profit 2: {numeral(profit2).format('0.0')} $</p>
+        <p className="title">Withdrawal Value 2: {numeral(withdrawalValue2).format('0.0')} $</p>
       </div>
     </div>
   );
