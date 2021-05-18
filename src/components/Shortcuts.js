@@ -5,12 +5,12 @@ const Shortcuts = () => {
     <div className='shortcuts' >
       {arrayShortcuts.map((item,index)=>{
         return(
-          <div className='item-shortcuts' key={index}>
+          <a href={item.url} className='item-shortcuts' key={index}>
             <div className='img-shortcuts'>
               <img src={item.icon} alt={item.name}/>
             </div>
             <p className='name-shortcuts' >{item.name}</p>
-          </div>
+          </a>
         )
       })}
     </div>
