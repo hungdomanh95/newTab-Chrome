@@ -73,13 +73,12 @@ button {
 .content {
   /* width: 700px; */
   width: 50%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 20px 50px;
+  padding: 20px;
   box-shadow: rgba(215, 215, 215, 0.5) 0px 4px 16px;
   border-radius: 8px;
   margin: 20px 20px;
@@ -87,7 +86,6 @@ button {
   height: 500px;
 }
 .content.content-history {
-  padding: 50px;
   overflow-y: scroll;
 }
 .content .calculator {
