@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect, useState } from "react";
+import './css/App.css';
+import './css/reset.css';
+import Calculator from './components/Calculator';
+import History from './components/History';
 function App() {
+  const array =[
+    {
+      name:"NANO",
+      entry:12,
+      target1:15,
+      target2:17,
+      money:null,
+      valueBuy:null
+    },
+    {
+      name:"DOT",
+      entry:40,
+      target1:50,
+      target2:60,
+      money:null,
+      valueBuy:null
+    },
+  ]
+  useEffect(() => {
+    // localStorage.setItem("array", JSON.stringify(array));
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Calculator/>
+      <History/>
     </div>
   );
 }
