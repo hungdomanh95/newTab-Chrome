@@ -47,7 +47,7 @@ export const arrayShortcuts = [
     id:8,
     name:"Google",
     icon:iconGoogle,
-    url:"https://www.goodle.com/"
+    url:"https://www.google.com/"
   },
   {
     id:9,

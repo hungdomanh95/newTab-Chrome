@@ -7,11 +7,11 @@ import Shortcuts from "./components/Shortcuts";
 function App() {
   return (
     <div className="App">
+      <Shortcuts/>
       <div className="binance">
         <Calculator/>
         <History/>
       </div>
-      <Shortcuts/>
     </div>
   );
 }
