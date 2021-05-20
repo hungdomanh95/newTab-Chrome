@@ -93,6 +93,18 @@ button {
   align-items: center;
   width: 100%;
 }
+.input.input-convert{
+  flex-direction: row;
+  width: 50%;
+}
+.convert{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.symbol{
+  margin-right:10px;
+}
 .calculator-item {
   width: 100%;
 }
@@ -138,6 +150,7 @@ button {
   /* color: white; */
   font-family: var(--font);
   padding: 10px 0;
+  margin:0px 10px
 }
 .input {
   display: flex;

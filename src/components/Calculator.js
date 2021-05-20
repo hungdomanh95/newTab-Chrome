@@ -8,11 +8,14 @@ const Calculator = () => {
   const [result1, setResult1] = React.useState(0);
   const [result2, setResult2] = React.useState(0);
   const [profit1, setProfit1] = React.useState(0);
-  console.log('profit1: ', profit1);
   const [profit2, setProfit2] = React.useState(0);
-  console.log('profit2: ', profit2);
   const [withdrawalValue1, setWithdrawalValue1] = React.useState(0);
   const [withdrawalValue2, setWithdrawalValue2] = React.useState(0);
+
+  const [money$, setMoney$] = React.useState(null);
+  const [moneyVND, setMoneyVND] = React.useState(null);
+  const [resultConvert, setResultConvert] = React.useState(null);
+
   const handleCalc = () => {
     if (entry && target1 && target2 && money) {
       if (money >= 10) {
@@ -25,8 +28,43 @@ const Calculator = () => {
       } else alert("Please enter more than 10$ ");
     }
   };
+  const convert = () => {
+    setResultConvert(money$*moneyVND)
+  }
   return (
     <div className="content">
+      <div className='convert'>
+        <label className="input input-convert" >
+            <input
+              type="number"
+              className="input-focus"
+              value={money$}
+              onChange={(e) => setMoney$(e.target.value)}
+              onKeyUp={convert}
+            />
+            <p className="title">$</p>
+        </label>
+        <span className='symbol' >*</span>
+        <label className="input input-convert" >
+            <input
+              type="text"
+              className="input-focus"
+              value={moneyVND}
+              onChange={(e) => setMoneyVND(e.target.value)}
+              onKeyUp={convert}
+            />
+            <p className="title">VNĐ</p>
+        </label>
+        <span className='symbol' > = </span>
+        <label className="input input-convert" >
+            <input
+              type="text"
+              className="input-focus"
+              value={numeral(resultConvert).format('0,0')}
+            />
+            <p className="title">VNĐ</p>
+        </label>
+      </div>
       <div className="calculator">
         <div className="calculator-item">
           <label className="input" >

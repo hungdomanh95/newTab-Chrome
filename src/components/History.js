@@ -17,7 +17,6 @@ const History = () => {
   const [valueBuyEdit, setValueBuyEdit] = React.useState(0);
 
   const [statusPopup, setStatusPopup] = React.useState(undefined);
-  const [statusEdit, setStatusEdit] = React.useState(undefined);
   useEffect(() => {
     var arrayLocal = JSON.parse(localStorage.getItem("array")) || [];
     setList(arrayLocal);
