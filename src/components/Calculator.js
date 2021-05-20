@@ -1,4 +1,5 @@
 import React from "react";
+import BTCTracker from "./BTCTracker";
 var numeral = require('numeral');
 const Calculator = () => {
   const [entry, setEntry] = React.useState(0);
@@ -33,6 +34,7 @@ const Calculator = () => {
   }
   return (
     <div className="content">
+      <BTCTracker />
       <div className='convert'>
         <label className="input input-convert" >
             <input

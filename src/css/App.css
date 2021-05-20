@@ -97,10 +97,15 @@ button {
   flex-direction: row;
   width: 50%;
 }
+.price{
+  margin: 0px auto 15px auto;
+  width: 95%;
+}
 .convert{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: 95%;
 }
 .symbol{
   margin-right:10px;
